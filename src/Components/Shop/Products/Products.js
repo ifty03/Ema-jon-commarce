@@ -1,9 +1,10 @@
-import React from 'react';
+
 import './Products.css'
 
 const Products = (props) => {
-    console.log(props)
-    const {name,img,price,seller,ratings}=props.products;
+    const {products,orderSummary}=props;
+    const {name,img,price,seller,ratings}=products;
+
     return (
         <div className='single-product'>
             
@@ -21,7 +22,7 @@ const Products = (props) => {
             <p style={{fontSize:"12px"}}>Manufacture: {seller}</p>
             <p style={{fontSize:"12px"}}>Ratings: {ratings} Star</p>
         </div>
-        <button className='button'>Add to Cart <i class="fa-solid fa-cart-plus"></i></button>
+        <button onClick={()=>{orderSummary(products)}} className='button'>Add to Cart <i className="fa-solid fa-cart-plus"></i></button>
         </div>
     );
 };
