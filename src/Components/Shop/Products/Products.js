@@ -21,7 +21,7 @@ const Products = (props) => {
             <p style={{fontSize:"12px"}}>Manufacture: {seller}</p>
             <p style={{fontSize:"12px"}}>Ratings: {ratings} Star</p>
         </div>
-        <button className='button'>Add to Cart</button>
+        <button className='button'>Add to Cart <i class="fa-solid fa-cart-plus"></i></button>
         </div>
     );
 };
